@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Restaurant Finder</title>
+    <title>Dyli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,10 +37,12 @@
             gap: 20px;
         }
 
-        /* Title styles with Lobster font */
+        /* Title styles with Lobster font, adjusted for less boldness */
         h1 {
-            font-family: '', cursive;
+            font-family: 'Lobster', cursive;
             font-size: 5.6vw;
+            letter-spacing: 0.00001em; /* Slight letter spacing to reduce the perceived boldness */
+            font-weight:400;
         }
 
         /* QR Code container */
@@ -117,7 +119,7 @@
 <body>
 
     <div class="topPage">
-        <h1>Find your friends’ favourite restaurants</h1>
+        <h1>Find your friends’ favourites restaurants</h1>
         <h1>with</h1>
         <div class="qr-code-container">
             <img src="https://i.ibb.co/RHbLvdJ/Group-37214.png" alt="QR Code" class="qr-code">
