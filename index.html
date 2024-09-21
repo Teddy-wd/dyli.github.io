@@ -1,128 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Find Your Friends' Favourites Restaurants</title>
+    <meta charset="utf-8">
+    <title>Restaurant Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
     <style>
-        /* Global Styles */
+        @font-face {
+            font-family: 'Love Ya Like A Sister';
+            font-style: normal;
+            font-weight: 400;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/loveyalikeasister/v22/R70EjzUBlOqPeouhFDfR80-0FhOqJubN-BeL-3xdgGE.woff2) format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Open Sans';
+            font-style: italic;
+            font-weight: 300 800;
+            font-display: swap;
+            src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
+        }
+
         * {
+            font-family: 'Love Ya Like A Sister';
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Love Ya Like A Sister', cursive;
-            background-color: #ff664f;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            height: 100vh;
-            color: white;
-            text-align: center;
+            margin: 0;
+            font-family: 'Open Sans', sans-serif;
         }
 
-        /* Top section */
-        .top-section {
+        .page {
+            height: 100vh;
+            width: 100vw;
             display: flex;
             flex-direction: column;
+        }
+
+        .topPage {
+            flex-grow: 1;
+            background: #ff664f;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 35px; /* Reduced by 30% */
+            justify-content: center;
+            padding: 14px; /* Reduced by 30% */
+        }
+
+        .title {
+            color: #fff;
+            text-align: center;
+            font-size: 5.6vw; /* Reduced by 30% */
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            width: 80%;
+            margin: 0;
+        }
+
+        .qrcodeDiv {
+            display: flex;
             justify-content: center;
             align-items: center;
-            flex-grow: 1;
         }
 
-        h1 {
-            font-size: 5vw;
-            margin-bottom: 10px;
-        }
-
-        /* QR Code container */
-        .qr-code-container {
-            background-color: white;
-            border-radius: 15px;
-            padding: 10px;
-        }
-
-        .qr-code {
-            width: 150px;
-            height: 150px;
-        }
-
-        /* Footer with buttons */
-        .footer {
-            display: flex;
-            justify-content: center;
-            background-color: #f13f3f;
-            padding: 15px;
-        }
-
-        .footer button {
-            background-color: transparent;
-            border: none;
-            color: white;
-            font-size: 1.2rem;
-            margin: 0 20px;
+        .qrcode {
+            width: 14vw; /* Reduced by 30% */
+            height: 14vw; /* Reduced by 30% */
+            max-width: 140px; /* Reduced by 30% */
+            max-height: 140px; /* Reduced by 30% */
+            border-radius: 10px; /* Reduced by 30% */
+            background: #fff;
             cursor: pointer;
         }
 
-        .footer button:hover {
-            text-decoration: underline;
+        .downBar {
+            height: 60px; /* Reduced by 30% */
+            background: #f13f3f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        /* Responsive Styles */
+        .button {
+            height: 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 1.26rem; /* Reduced by 30% */
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 7px 21px; /* Reduced by 30% */
+            transition: all 0.3s ease;
+        }
+
+        .button:hover {
+            background: #ff664f;
+            transform: translateY(-2px);
+        }
+
+        .button:active {
+            background: #d9534f;
+            transform: translateY(1px);
+        }
+
+        .absolute-image {
+            position: absolute;
+            width: 10.5vw; /* Reduced by 30% */
+            height: auto;
+            z-index: 10;
+        }
+
+        .pasta {
+            top: 10%;
+            right: 7%; /* Adjusted for layout */
+            width: 14vw; /* Reduced by 30% */
+            max-width: 245px; /* Reduced by 30% */
+        }
+
+        .garlic {
+            bottom: 0;
+            left: 7%; /* Adjusted for layout */
+            width: 10.5vw; /* Reduced by 30% */
+            max-width: 140px; /* Reduced by 30% */
+        }
+
+        /* Responsive Breakpoints */
         @media (max-width: 768px) {
-            h1 {
-                font-size: 7vw;
+            .title {
+                font-size: 7vw; /* Reduced by 30% */
             }
 
-            .qr-code {
-                width: 100px;
-                height: 100px;
+            .downBar .button {
+                font-size: 1.05rem; /* Reduced by 30% */
+                padding: 7px 14px; /* Reduced by 30% */
             }
 
-            .footer button {
-                font-size: 1rem;
-                margin: 0 15px;
+            .absolute-image.pasta {
+                width: 17.5vw; /* Reduced by 30% */
+            }
+
+            .absolute-image.garlic {
+                width: 14vw; /* Reduced by 30% */
             }
         }
 
         @media (max-width: 480px) {
-            h1 {
-                font-size: 8vw;
+            .title {
+                font-size: 8.4vw; /* Reduced by 30% */
             }
 
-            .qr-code {
-                width: 80px;
-                height: 80px;
+            .downBar .button {
+                font-size: 0.84rem; /* Reduced by 30% */
+                padding: 5px 10px; /* Reduced by 30% */
             }
 
-            .footer button {
-                font-size: 0.9rem;
-                margin: 0 10px;
+            .absolute-image.pasta {
+                width: 21vw; /* Reduced by 30% */
+            }
+
+            .absolute-image.garlic {
+                width: 17.5vw; /* Reduced by 30% */
             }
         }
     </style>
 </head>
 <body>
-
-    <div class="top-section">
-        <h1>Find your friends’</h1>
-        <h1>favourites restaurants</h1>
-        <h1>with</h1>
-        <div class="qr-code-container">
-            <img src="your-qr-code-url-here" alt="QR Code" class="qr-code">
+    <div class="page">
+        <div class="topPage">
+            <h1 class="title">Find your friends’ favourite restaurants</h1>
+            <h1 class="title">with</h1>
+            <div class="qrcodeDiv">
+                <div class="qrcode"></div>
+            </div>
+        </div>
+        <img src="./Pasta.svg" alt="Image 1" class="absolute-image pasta">
+        <img src="./Garlic.svg" alt="Image 2" class="absolute-image garlic">
+        <div class="downBar">
+            <button class="button noselect">Terms</button>
+            <button class="button noselect">Privacy</button>
+            <button class="button noselect">Contact</button>
         </div>
     </div>
-
-    <div class="footer">
-        <button>Terms</button>
-        <button>Privacy</button>
-        <button>Contact</button>
-    </div>
-
 </body>
 </html>
