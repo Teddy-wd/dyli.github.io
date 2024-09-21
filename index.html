@@ -7,15 +7,8 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Love Ya Like A Sister';
-            font-style: normal;
-            font-weight: 400;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/loveyalikeasister/v22/R70EjzUBlOqPeouhFDfR80-0FhOqJubN-BeL-3xdgGE.woff2) format('woff2');
-        }
-
         @font-face {
             font-family: 'Open Sans';
             font-style: italic;
@@ -25,7 +18,6 @@
         }
 
         * {
-            font-family: 'Love Ya Like A Sister';
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -49,15 +41,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 35px; /* Reduced by 30% */
+            gap: 35px;
             justify-content: center;
-            padding: 14px; /* Reduced by 30% */
+            padding: 14px;
         }
 
         .title {
             color: #fff;
             text-align: center;
-            font-size: 5.6vw; /* Reduced by 30% */
+            font-family: 'Lobster', cursive;
+            font-size: 5.6vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -72,17 +65,15 @@
         }
 
         .qrcode {
-            width: 14vw; /* Reduced by 30% */
-            height: 14vw; /* Reduced by 30% */
-            max-width: 140px; /* Reduced by 30% */
-            max-height: 140px; /* Reduced by 30% */
-            border-radius: 10px; /* Reduced by 30% */
-            background: #fff;
-            cursor: pointer;
+            width: 150px;
+            height: 150px;
+            background: url('/mnt/data/Group 37214.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 10px;
         }
 
         .downBar {
-            height: 60px; /* Reduced by 30% */
+            height: 60px;
             background: #f13f3f;
             display: flex;
             align-items: center;
@@ -93,11 +84,11 @@
             height: 100%;
             color: #fff;
             text-align: center;
-            font-size: 1.26rem; /* Reduced by 30% */
+            font-size: 1.26rem;
             background-color: transparent;
             border: none;
             cursor: pointer;
-            padding: 7px 21px; /* Reduced by 30% */
+            padding: 7px 21px;
             transition: all 0.3s ease;
         }
 
@@ -111,63 +102,36 @@
             transform: translateY(1px);
         }
 
-        .absolute-image {
-            position: absolute;
-            width: 10.5vw; /* Reduced by 30% */
-            height: auto;
-            z-index: 10;
-        }
-
-        .pasta {
-            top: 10%;
-            right: 7%; /* Adjusted for layout */
-            width: 14vw; /* Reduced by 30% */
-            max-width: 245px; /* Reduced by 30% */
-        }
-
-        .garlic {
-            bottom: 0;
-            left: 7%; /* Adjusted for layout */
-            width: 10.5vw; /* Reduced by 30% */
-            max-width: 140px; /* Reduced by 30% */
-        }
-
         /* Responsive Breakpoints */
         @media (max-width: 768px) {
             .title {
-                font-size: 7vw; /* Reduced by 30% */
+                font-size: 7vw;
             }
 
             .downBar .button {
-                font-size: 1.05rem; /* Reduced by 30% */
-                padding: 7px 14px; /* Reduced by 30% */
+                font-size: 1.05rem;
+                padding: 7px 14px;
             }
 
-            .absolute-image.pasta {
-                width: 17.5vw; /* Reduced by 30% */
-            }
-
-            .absolute-image.garlic {
-                width: 14vw; /* Reduced by 30% */
+            .qrcode {
+                width: 120px;
+                height: 120px;
             }
         }
 
         @media (max-width: 480px) {
             .title {
-                font-size: 8.4vw; /* Reduced by 30% */
+                font-size: 8.4vw;
             }
 
             .downBar .button {
-                font-size: 0.84rem; /* Reduced by 30% */
-                padding: 5px 10px; /* Reduced by 30% */
+                font-size: 0.84rem;
+                padding: 5px 10px;
             }
 
-            .absolute-image.pasta {
-                width: 21vw; /* Reduced by 30% */
-            }
-
-            .absolute-image.garlic {
-                width: 17.5vw; /* Reduced by 30% */
+            .qrcode {
+                width: 100px;
+                height: 100px;
             }
         }
     </style>
@@ -181,8 +145,6 @@
                 <div class="qrcode"></div>
             </div>
         </div>
-        <img src="" alt="Image 1" class="absolute-image pasta">
-        <img src="" alt="Image 2" class="absolute-image garlic">
         <div class="downBar">
             <button class="button noselect">Terms</button>
             <button class="button noselect">Privacy</button>
