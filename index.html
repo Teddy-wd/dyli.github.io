@@ -7,16 +7,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
     <style>
-        @font-face {
-            font-family: 'Open Sans';
-            font-style: italic;
-            font-weight: 300 800;
-            font-display: swap;
-            src: url(https://fonts.gstatic.com/s/opensans/v40/memtYaGs126MiZpBA-UFUIcVXSCEkx2cmqvXlWqWtE6F15M.woff2) format('woff2');
-        }
-
+        /* Base font styles */
         * {
             margin: 0;
             padding: 0;
@@ -24,132 +17,118 @@
         }
 
         body {
-            margin: 0;
             font-family: 'Open Sans', sans-serif;
-        }
-
-        .page {
-            height: 100vh;
-            width: 100vw;
+            background-color: #ff664f;
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
+            height: 100vh;
+            color: white;
+            text-align: center;
         }
 
+        /* Top section */
         .topPage {
             flex-grow: 1;
-            background: #ff664f;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            gap: 35px;
             justify-content: center;
-            padding: 14px;
+            align-items: center;
+            gap: 20px;
         }
 
-        .title {
-            color: #fff;
-            text-align: center;
-            font-family: 'Lobster', cursive;
+        /* Title styles with Lobster font */
+        h1 {
+            font-family: '', cursive;
             font-size: 5.6vw;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            width: 80%;
-            margin: 0;
         }
 
-        .qrcodeDiv {
+        /* QR Code container */
+        .qr-code-container {
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .qrcode {
-            width: 150px;
-            height: 150px;
-            background: url('/mnt/data/Group 37214.png') no-repeat center center;
-            background-size: cover;
+        .qr-code {
+            width: 20vw; /* Make the width responsive to the viewport width */
+            max-width: 200px; /* Set a maximum width so the image doesn't get too large */
+            height: auto; /* Keep the aspect ratio intact */
             border-radius: 10px;
         }
 
+        /* Footer with buttons */
         .downBar {
             height: 60px;
             background: #f13f3f;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
         }
 
         .button {
-            height: 100%;
-            color: #fff;
-            text-align: center;
-            font-size: 1.26rem;
             background-color: transparent;
             border: none;
+            color: white;
+            font-size: 1.2rem;
+            margin: 0 20px;
             cursor: pointer;
-            padding: 7px 21px;
             transition: all 0.3s ease;
         }
 
         .button:hover {
-            background: #ff664f;
-            transform: translateY(-2px);
+            text-decoration: underline;
         }
 
-        .button:active {
-            background: #d9534f;
-            transform: translateY(1px);
-        }
-
-        /* Responsive Breakpoints */
+        /* Responsive Styles */
         @media (max-width: 768px) {
-            .title {
+            h1 {
                 font-size: 7vw;
             }
 
-            .downBar .button {
-                font-size: 1.05rem;
-                padding: 7px 14px;
+            .qr-code {
+                width: 25vw;
+                max-width: 150px;
             }
 
-            .qrcode {
-                width: 120px;
-                height: 120px;
+            .button {
+                font-size: 1rem;
+                margin: 0 15px;
             }
         }
 
         @media (max-width: 480px) {
-            .title {
+            h1 {
                 font-size: 8.4vw;
             }
 
-            .downBar .button {
-                font-size: 0.84rem;
-                padding: 5px 10px;
+            .qr-code {
+                width: 35vw;
+                max-width: 120px;
             }
 
-            .qrcode {
-                width: 100px;
-                height: 100px;
+            .button {
+                font-size: 0.9rem;
+                margin: 0 10px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="page">
-        <div class="topPage">
-            <h1 class="title">Find your friends’ favourite restaurants</h1>
-            <h1 class="title">with</h1>
-            <div class="qrcodeDiv">
-                <div class="qrcode"></div>
-            </div>
-        </div>
-        <div class="downBar">
-            <button class="button noselect">Terms</button>
-            <button class="button noselect">Privacy</button>
-            <button class="button noselect">Contact</button>
+
+    <div class="topPage">
+        <h1>Find your friends’ favourite restaurants</h1>
+        <h1>with</h1>
+        <div class="qr-code-container">
+            <img src="https://i.ibb.co/RHbLvdJ/Group-37214.png" alt="QR Code" class="qr-code">
         </div>
     </div>
+
+    <div class="downBar">
+        <button class="button">Terms</button>
+        <button class="button">Privacy</button>
+        <button class="button">Contact</button>
+    </div>
+
 </body>
 </html>
