@@ -16,33 +16,38 @@
             box-sizing: border-box;
         }
 
+        /* Set body as flexbox and use column layout */
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #ff664f;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: 100vh;
+            min-height: 100vh; /* Ensure body takes full height of the viewport */
             color: white;
             text-align: center;
         }
 
         /* Top section */
         .topPage {
-            flex-grow: 1;
+            flex-grow: 1; /* Pushes downBar to the bottom if content is short */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: 20px;
+            padding-left: 5%;
+            padding-right: 5%;
         }
 
-        /* Title styles with Lobster font, adjusted for less boldness */
+        /* Title styles with Lobster font, adjusted for less boldness and added padding */
         h1 {
             font-family: 'Lobster', cursive;
             font-size: 5.6vw;
             letter-spacing: 0.00001em; /* Slight letter spacing to reduce the perceived boldness */
-            font-weight:400;
+            font-weight: 400;
+            padding-left: 10%;
+            padding-right: 10%; /* Added horizontal padding to create more space */
         }
 
         /* QR Code container */
@@ -59,13 +64,16 @@
             border-radius: 10px;
         }
 
-        /* Footer with buttons */
+        /* DownBar always stays at the bottom of the page */
         .downBar {
             height: 60px;
             background: #f13f3f;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            bottom: 0;
+            width: 100%; /* Ensures full width at the bottom */
         }
 
         .button {
@@ -80,6 +88,15 @@
 
         .button:hover {
             text-decoration: underline;
+        }
+
+        a {
+            color: inherit; /* Inherit color from parent */
+            text-decoration: none; /* Remove underline from link by default */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Add underline on hover */
         }
 
         /* Responsive Styles */
@@ -127,9 +144,15 @@
     </div>
 
     <div class="downBar">
-        <button class="button">Terms</button>
-        <button class="button">Privacy</button>
-        <button class="button">Contact</button>
+        <a href="https://app.termly.io/policy-viewer/policy.html?policyUUID=434e9c55-5a70-4e06-adce-e862d144fc68" target="_blank">
+            <button class="button">Terms</button>
+        </a>
+        <a href="https://app.termly.io/dashboard/website/c1a72d82-6c05-4955-b1fe-fe1a36d91630/privacy-policy" target="_blank">
+            <button class="button">Privacy</button>
+        </a>
+        <a href="https://www.linkedin.com/company/dyli-app/" target="_blank">
+            <button class="button">Contact</button>
+        </a>
     </div>
 
 </body>
