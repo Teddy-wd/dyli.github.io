@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Terms and Conditions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Favicon (optional, if needed for this page too) -->
+    <link rel="icon" href="https://i.ibb.co/bvKF7QC/1024x1024bb-2.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .back-to-home {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #007BFF;
+        }
+
+        .back-to-home:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Terms and Conditions</h1>
+        <!-- Embed Termly Terms and Conditions -->
+        <div name="termly-embed" data-id="434e9c55-5a70-4e06-adce-e862d144fc68"></div>
+        <script type="text/javascript">
+        (function(d, s, id) {
+          var js, tjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "https://app.termly.io/embed-policy.min.js";
+          tjs.parentNode.insertBefore(js, tjs);
+        }(document, 'script', 'termly-jssdk'));
+        </script>
+
+        <!-- Back to Home Link -->
+        <a href="index.html" class="back-to-home">Back to Home</a>
+    </div>
+
+</body>
+</html>
+
