@@ -16,107 +16,113 @@
     <link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&family=Open+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            line-height: 1.6;
-        }
-        .language-switcher {
-            text-align: right;
-            padding: 10px 20px;
-            background: #f5f5f5;
-        }
-        .language-switcher select {
-            padding: 5px;
-            font-size: 1rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: white;
-        }
-        .hero {
-            background: #FF664F url('hero-image.jpg') center/cover no-repeat;
-            color: #ffffff;
-            padding: 100px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        .cta-button {
-            padding: 15px 30px;
-            background-color: #ffffff;
-            color: #FF664F;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .section {
-            padding: 60px 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        .section h2 {
-            font-size: 2.5rem;
-            color: #333;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-        }
-        .feature-item {
-            flex: 1 1 30%;
-            background: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .feature-item img {
-            width: 60px;
-            margin-bottom: 15px;
-        }
-        .feature-item h3 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-        }
-        .feature-item p {
-            font-size: 1rem;
-            color: #555;
-        }
-        .cta-section {
-            background-color: #FF664F;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .cta-section h2 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-        .cta-section .cta-button {
-            background-color: white;
-            color: #FF664F;
-            padding: 15px 30px;
-            font-size: 1.2rem;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+.language-switcher {
+    text-align: right;
+    padding: 10px 20px;
+    background: #f5f5f5;
+}
+.language-switcher select {
+    padding: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+.hero {
+    background: #FF664F url('hero-image.jpg') center/cover no-repeat;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    /* The new font-family will be applied here via the #hero-text selector */
+}
+#hero-text {
+    font-family: 'Love Ya Like A Sister', cursive;
+    font-size: 1.2rem; /* Optional: Adjust if needed */
+}
+.cta-button {
+    padding: 15px 30px;
+    background-color: #ffffff;
+    color: #FF664F;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+.section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.feature-item {
+    flex: 1 1 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.feature-item img {
+    width: 60px;
+    margin-bottom: 15px;
+}
+.feature-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.feature-item p {
+    font-size: 1rem;
+    color: #555;
+}
+.cta-section {
+    background-color: #FF664F;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+.cta-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.cta-section .cta-button {
+    background-color: white;
+    color: #FF664F;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+}
+
     </style>
 </head>
 <body>
